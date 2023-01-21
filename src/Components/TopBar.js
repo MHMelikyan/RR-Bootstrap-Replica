@@ -1,30 +1,25 @@
-import Card from 'react-boothstrap/Cards'
-import Form from 'react-boothstrap/Form'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Button from 'react-bootstrap/Button'
 
-export default function Background(){
+export default function TopBar(){
     return(
-        <div style={{display: "flex", flexDirection: "row"}}>
-            <div>
-                <Card style={{ width: "1300px", minHeight: "428px", marginBottom: "50px", backgroundColor: "#DEEED6" }} className="text-black">
-                  <div style={{ top: "auto", width: "578px", marginLeft: "100px", marginBottom: "50px", marginTop: "75px"}}>
-                        <Card.Text style={{ fontSize: "2.5em", fontWeight: "bold" }}>
-                            Order groceries for delivery <br /> or pickup today
-                    </Card.Text>
-                        <Card.Text style={{ fontSize: "1em" }}>
-                            Whatever you want from local stores, brought right to your door.
-                    </Card.Text>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Control size="lg" type="text" placeholder="   Enter your address                                         ->" />
-                            </Form.Group>
-                        </Form>
-                    </div>
-                </Card>
-            </div>
-            <div >
-                <img style={{ height: "428px", width: "20%", position: "absolute", backgroundSize: "contain", backgroundRepeat: "no-repeat" }} src="https://d2d8wwwkmhfcva.cloudfront.net/1500x1520/d2guulkeunn7d8.cloudfront.net/assets/homepage/homepage-mobile-background-m3-high-res-ca3279087ea0a3337f671b694b196d43fd207443d5825e61295b0996974835e9.jpg" alt="Card image" />
-            </div>
+        <div>
+            <Navbar bg= "light" expend="lg">
+            <Navbar.Brand style={{margin: "5px 0 0 20px"}} href="#home">
+                <img src="https://d2guulkeunn7d8.cloudfront.net/assets/beetstrap/brand/instacart-logo-color-4db9d81ca0b7638befdc4bd331f64a2633df790c0b55ef627c99b1ba77af72b7.svg" /> 
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto"> 
+                    </Nav>
+                    <Nav style={{padding: "24px 40px 20px 40px", fontSize: "18px", lineHeight: "26px", fontWeight: "bolder", display: "flex" }} >
+                        <Nav.Link style={{color: "#343538"}} href="#LogIn">Log In</Nav.Link>
+                        <Button variant="success" style={{fontSize: "18px"}}>Sign Up</Button>{' '}
+                    </Nav>
+                </Navbar.Collapse>
 
+            </Navbar>
         </div>
     )
 }
